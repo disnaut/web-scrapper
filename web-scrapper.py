@@ -35,6 +35,9 @@ def main():
     file_reader = open_file(file_name) #inside something.txt
     file_lines = file_reader.readlines() #Returns string array of each line in the file.
     file_lines = strip_new_lines(file_lines)
+    print(file_lines)
+
+
 
 
 def open_file(file_name):
@@ -52,6 +55,8 @@ def strip_new_lines(file_lines):
     # Reading things in order
     for line in file_lines:
         temp = line.strip()
+        temp = temp.split(",")
+
         returned_array.append(temp) #Put the newly stripped string back into place
 
 
